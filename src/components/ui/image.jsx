@@ -3,7 +3,7 @@ import { useSize } from "@/hooks/use-size"
 import { cn } from "@/lib/utils"
 
 const FALLBACK_IMAGE_URL =
-  "/images/public/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png"
+  "/images/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png"
 
 // Wix Media Platform hosts whose images support /v1/ transform URLs
 // (resize, focal-point crop, and format conversion via the OUTPUT FILENAME

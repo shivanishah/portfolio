@@ -15,7 +15,7 @@ const PROJECTS = [
     tags: ['Python','LLMs', 'NLP', 'Streamlit', 'OpenAI', 'Pandas', 'Plotly'],
     status: 'COMPLETED',
     link: 'https://github.com/shivanishah/feedback-insight',
-    img: '/images/public/d9dca89bc_generated_37b016ff.png',
+    img: '/images/d9dca89bc_generated_37b016ff.png',
     livelink:'https://feedback-insight.streamlit.app/'
   }
 ];

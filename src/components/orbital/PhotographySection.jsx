@@ -7,17 +7,17 @@ import { Image } from '@/components/ui/image';
 
 const PHOTOS = [
   {
-    src: '/images/public/3b14990ab_generated_555a8476.png',
+    src: '/images/3b14990ab_generated_555a8476.png',
     alt: 'Brutalist architecture at night with cold orbit filter',
     caption: 'MONOLITH — Adelaide, 2024',
   },
   {
-    src: '/images/public/985a0577f_generated_87896227.png',
+    src: '/images/985a0577f_generated_87896227.png',
     alt: 'Mountain landscape reflected in lake under milky way',
     caption: 'TERMINUS — Southern Alps, 2023',
   },
   {
-    src: '/images/public/6e7b4abd7_generated_e2e97645.png',
+    src: '/images/6e7b4abd7_generated_e2e97645.png',
     alt: 'Aerial view of coastal city at night from high altitude',
     caption: 'GRID — Perth Basin, 2024',
   },

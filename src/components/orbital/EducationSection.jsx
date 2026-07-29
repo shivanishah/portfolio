@@ -4,7 +4,7 @@ import SectionReveal from '@/components/orbital/SectionReveal';
 import SectionLabel from '@/components/orbital/SectionLabel';
 import { Image } from '@/components/ui/image';
 
-const EDUCATION_IMAGE = '/images/public/f7c0ac09c_generated_2cb0c557.png';
+const EDUCATION_IMAGE = '/images/f7c0ac09c_generated_2cb0c557.png';
 
 const EDUCATION_DETAILS = [
   {
