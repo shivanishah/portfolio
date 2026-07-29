@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 
-const HERO_IMAGE = '/images/public/3c263f9f5_generated_264b0ad9.png';
+const HERO_IMAGE = '/images/3c263f9f5_generated_264b0ad9.png';
 
 const SIGNAL_PINGS = [
   { x: 30, y: 35, label: 'SmartSat CRC/ASII', delay: 0 },
