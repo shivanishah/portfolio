@@ -147,18 +147,6 @@ In the project directory, you can run:
 | `npm run lint:fix` | Automatically fix ESLint issues |
 | `npm run typecheck` | Type-check with TypeScript (if configured) |
 
-## 🔧 Environment Variables
-
-Create a `.env` file in the root directory for environment variables:
-
-```env
-VITE_API_URL=your_api_url_here
-VITE_MAPBOX_TOKEN=your_mapbox_token
-VITE_STRIPE_KEY=your_stripe_publishable_key
-```
-
-> **Note:** Variable names must start with `VITE_` to be exposed to Vite-processed code.
-
 ## 📱 Responsive Breakpoints
 
 The website uses Tailwind's responsive breakpoints:
