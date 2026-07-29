@@ -155,3 +155,6 @@ The website uses Tailwind's responsive breakpoints:
 ---
 
 ⭐ **If you like this portfolio template, please consider giving it a star!** Built with ❤️ by [Shivani]
+
+## Live 
+- https://shivanishah-dev.vercel.app/
