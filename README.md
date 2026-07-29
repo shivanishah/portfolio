@@ -165,54 +165,16 @@ The website uses Tailwind's responsive breakpoints:
 - Edge (latest)
 - Opera (latest)
 
-## 🚀 Deployment
-
-This portfolio can be deployed to any static hosting platform:
-
-### Vercel (Recommended)
-1. Push code to GitHub
-2. Import project on Vercel
-3. Vercel auto-detects Vite config and deploys
-
-### Netlify
-1. Push code to GitHub
-2. Connect repo on Netlify
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-
-### GitHub Pages
-1. Add `"homepage": "https://username.github.io/repo-name"` to package.json
-2. Install gh-pages: `npm install --save-dev gh-pages`
-3. Add deploy script: `"deploy": "gh-pages -d dist"`
-4. Run: `npm run deploy`
-
-### Other Platforms
-Simply build the project (`npm run build`) and deploy the contents of the `dist/` folder.
-
-## 🔧 Development Tools
-
-### ESLint
-Code quality is maintained with ESLint:
-- `npm run lint` - Check for issues
-- `npm run lint:fix` - Automatically fix fixable issues
-
-### Type Checking
-JavaScript type checking with JSDoc:
-- `npm run typecheck` - Run TypeScript type checking
-
 ## 🙏 Acknowledgments
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [Lucide Icons](https://lucide.dev/)
 - [Radix UI](https://www.radix-ui.com/)
 - [React Query](https://tanstack.com/query/latest)
 - [React Hook Form](https://react-hook-form.com/)
 
 ---
 
-⭐ **If you like this portfolio template, please consider giving it a star!**
-
-Built with ❤️ by [Shivani]
+⭐ **If you like this portfolio template, please consider giving it a star!** Built with ❤️ by [Shivani]
