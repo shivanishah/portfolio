@@ -10,9 +10,6 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS 
 - **Skills Visualization** - Interactive skill charts and progress bars
 - **Contact Form** - Working contact form with validation
 - **Blog Section** - Markdown-based blog with syntax highlighting
-- **Testimonials Carousel** - Beautiful testimonial slider
-- **Dark/Light Mode** - Theme switching with system preference detection
-- **SEO Optimized** - Proper meta tags and structure for search engines
 - **Performance Optimized** - Fast loading with Vite and code splitting
 
 ## 🛠️ Tech Stack
@@ -20,11 +17,7 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS 
 - **Framework:** React 18 with Vite
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
-- **Icons:** Lucide React
 - **State Management:** React Query (for API integrations)
-- **Form Handling:** React Hook Form with Zod validation
-- **Routing:** React Router DOM v6
-- **Date Handling:** Date-fns and Moment.js
 
 ## 🚀 Getting Started
 
