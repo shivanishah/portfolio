@@ -111,29 +111,6 @@ portfolio-website/
 └── README.md             # This file
 ```
 
-## 🎨 Customization
-
-### Personal Information
-
-Update your personal information in the respective components:
-
-- **About Me:** Edit `src/components/About.jsx` or relevant section
-- **Experience:** Update `src/components/Experience.jsx`
-- **Projects:** Modify `src/components/Projects.jsx` or individual project data
-- **Skills:** Adjust `src/components/Skills.jsx`
-- **Contact:** Modify form fields in `src/components/ContactForm.jsx`
-
-### Styling
-
-- **Colors:** Modify `tailwind.config.js` to change the color scheme
-- **Fonts:** Update font imports in `index.css` or `tailwind.config.js`
-- **Theme:** Dark/light mode is handled automatically via `next-themes`
-
-### Images and Media
-
-Place your images in:
-- `images/public` for content images
-
 ## 🛠️ Available Scripts
 
 In the project directory, you can run:
