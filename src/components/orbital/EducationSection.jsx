@@ -83,7 +83,7 @@ export default function EducationSection() {
           <h2 className="font-mono font-semibold text-3xl md:text-5xl mb-6">
             Education <span className="text-[#00F2FF]">Background</span>
           </h2>
-          <p className="text-[#8E9AAF] max-w-2xl leading-relaxed">
+          <p className="text-[#8E9AAF] py-2 leading-relaxed">
             Academic foundation in information technology and data science, with a focus on intelligent systems, machine learning, software engineering, and emerging technologies.
           </p>
         </SectionReveal>
