@@ -89,60 +89,44 @@ export default function EducationSection() {
         </SectionReveal>
 
         {/* Education visualization */}
-        <div className="grid lg:grid-cols-5 gap-8 mb-8">
-          {/* <div className="sm:col-span-2 lg:col-span-2">
-            <SectionReveal delay={0.1}>
-              <div className="relative h-56 sm:h-64 lg:h-full overflow-hidden rounded-sm">
-                 <Image
-                  src={EDUCATION_IMAGE}
-                  alt="Academic illustration of spacecraft and orbital mechanics"
-                  className="w-full h-full"
-                  fittingType="fill"
-                /> 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#020408]/50 to-transparent" />
-              </div>
-            </SectionReveal>
-          </div> */}
-          <div className="lg:col-span-3 space-y-4">
-            {EDUCATION_DETAILS.map((edu, idx) => (
-              <SectionReveal key={edu.degree} delay={0.15 + idx * 0.1}>
-                <motion.div
-                  className="glass-panel p-6 group hover:border-[#00F2FF]/30 transition-all duration-500"
-                  whileHover={{ x: 4 }}
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="font-mono font-medium text-base mb-2 group-hover:text-[#00F2FF] transition-colors">
-                        {edu.degree}
-                      </h3>
-                      <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.institution}</p>
-                      <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.year}</p>
-                      <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.description}</p>
-                      <div className="mt-2 sm:mt-3">
-                        <span className="font-mono text-[8px] tracking-wider text-[#00F2FF] block">
-                          Relevant Coursework:
-                        </span>
-                        <div className="flex flex-wrap gap-2 mt-1">
-                          {edu.relevantCourses.map((course) => (
-                            <span key={course} className="font-mono text-[8px] tracking-wider px-2 py-1 border border-[#00F2FF]/20 text-[#00F2FF]/70">
-                              {course}
-                            </span>
-                          ))}
-                        </div>
+        <div className="flex flex-col mb-5 space-y-4">
+          {EDUCATION_DETAILS.map((edu, idx) => (
+            <SectionReveal key={edu.degree} delay={0.15 + idx * 0.1}>
+              <motion.div
+                className="glass-panel p-6 group hover:border-[#00F2FF]/30 transition-all duration-500"
+                whileHover={{ x: 4 }}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="font-mono font-medium text-base mb-2 group-hover:text-[#00F2FF] transition-colors">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.institution}</p>
+                    <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.year}</p>
+                    <p className="text-[#8E9AAF] text-sm leading-relaxed">{edu.description}</p>
+                    <div className="mt-2 sm:mt-3">
+                      <span className="font-mono text-[8px] tracking-wider text-[#00F2FF] block">
+                        Relevant Coursework:
+                      </span>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {edu.relevantCourses.map((course) => (
+                          <span key={course} className="font-mono text-[8px] tracking-wider px-2 py-1 border border-[#00F2FF]/20 text-[#00F2FF]/70">
+                            {course}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <div className="text-right shrink-0">
-                      <span className="font-mono text-[10px] tracking-wider text-[#00F2FF] block">
-                        {edu.year.split(' - ')[0]}
-                      </span>
-                    </div>
                   </div>
-                </motion.div>
-              </SectionReveal>
-            ))}
-          </div>
+                  <div className="text-right shrink-0">
+                    <span className="font-mono text-[10px] tracking-wider text-[#00F2FF] block">
+                      {edu.year.split(' - ')[0]}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            </SectionReveal>
+          ))}
         </div>
-
         {/* Volunteer Work */}
         <SectionReveal delay={0.3}>
           <div className="flex items-center gap-3 mb-8">
