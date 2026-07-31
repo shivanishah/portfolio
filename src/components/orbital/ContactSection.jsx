@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SectionReveal from '@/components/orbital/SectionReveal';
 import SectionLabel from '@/components/orbital/SectionLabel';
 
+const INITIAL_FORM = { name: '', email: '', subject: '', message: '' };
+
 const FIELDS = [
   { key: 'name', label: 'OPERATOR_ID', placeholder: 'Enter your name...' },
   { key: 'email', label: 'COMM_CHANNEL', placeholder: 'Enter your email...' },
@@ -11,31 +13,39 @@ const FIELDS = [
 ];
 
 export default function ContactSection() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [form, setForm] = useState(INITIAL_FORM);
   const [status, setStatus] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleChange = (key, value) => {
     setForm(prev => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('transmitting');
+    setError('');
 
-    const { name, email, subject, message } = form;
-    // If email is empty, use a placeholder or show error
-    if (!email) {
-      alert('Please enter your email address');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || `Unable to transmit your message. (${response.status})`);
+      }
+
+      setForm(INITIAL_FORM);
+      setStatus('confirmed');
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (err) {
       setStatus('idle');
-      return;
+      setError(err.message || 'Unable to transmit your message.');
     }
-
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\n\n${message}`)}`;
-
-    window.location.href = mailtoLink;
-
-    setStatus('confirmed');
-    setTimeout(() => setStatus('idle'), 5000);
   };
 
   return (
@@ -148,6 +158,7 @@ export default function ContactSection() {
                     </motion.button>
                   )}
                 </AnimatePresence>
+                {error && <p className="mt-3 font-mono text-xs text-red-400">{error}</p>}
               </div>
             </form>
           </div>
