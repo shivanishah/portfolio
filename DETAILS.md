@@ -57,3 +57,6 @@ Update your personal information in the respective components:
 
 Place your images in:
 - `images/public` for content images
+
+## Backend
+VERCEL with ENV VAR and contact api
