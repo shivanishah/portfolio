@@ -15,7 +15,11 @@ const SKILLS = [
     x: 30,
     y: 15,
     size: 'lg',
-    connections: ['django', 'fastapi', 'pandas', 'pytorch', 'tensorflow', 'ml']
+    connections: [
+      'django', 'fastapi', 'flask', 'pandas', 'numpy', 'pytorch',
+      'tensorflow', 'sklearn', 'scipy', 'ml', 'data-engineering',
+      'web-scraping', 'basilisk'
+    ]
   },
   {
     id: 'javascript',
@@ -23,23 +27,34 @@ const SKILLS = [
     x: 15,
     y: 30,
     size: 'lg',
-    connections: ['react', 'typescript', 'nodejs', 'frontend']
+    connections: [
+      'react', 'typescript', 'nodejs', 'jquery', 'ajax',
+      'vite', 'frontend'
+    ]
   },
   {
     id: 'typescript',
     label: 'TypeScript',
     x: 25,
-    y: 25,
+    y: 35,
+    size: 'lg',
+    connections: ['react', 'nodejs', 'frontend', 'api-design']
+  },
+  {
+    id: 'c',
+    label: 'C',
+    x: 45,
+    y: 15,
     size: 'md',
-    connections: ['react', 'javascript']
+    connections: ['cpp', 'basilisk', 'simulation']
   },
   {
     id: 'cpp',
-    label: 'C / C++',
-    x: 50,
+    label: 'C++',
+    x: 55,
     y: 15,
     size: 'md',
-    connections: ['basilisk', 'simulation']
+    connections: ['c', 'basilisk', 'simulation']
   },
   {
     id: 'php',
@@ -47,15 +62,7 @@ const SKILLS = [
     x: 80,
     y: 20,
     size: 'md',
-    connections: ['laravel', 'mysql', 'backend']
-  },
-  {
-    id: 'r',
-    label: 'R Programming',
-    x: 85,
-    y: 80,
-    size: 'sm',
-    connections: ['statistics', 'analytics']
+    connections: ['laravel', 'yii2', 'mysql', 'backend']
   },
 
 
@@ -67,23 +74,35 @@ const SKILLS = [
     x: 45,
     y: 35,
     size: 'lg',
-    connections: ['python', 'nodejs', 'apis', 'databases']
+    connections: [
+      'python', 'nodejs', 'php', 'django', 'fastapi', 'flask',
+      'laravel', 'yii2', 'apis', 'graphql', 'api-design',
+      'databases', 'secure-coding'
+    ]
   },
   {
     id: 'django',
     label: 'Django',
-    x: 40,
+    x: 38,
     y: 25,
     size: 'md',
-    connections: ['python', 'postgresql', 'apis']
+    connections: ['python', 'postgresql', 'apis', 'backend']
   },
   {
     id: 'fastapi',
     label: 'FastAPI',
-    x: 55,
+    x: 52,
     y: 25,
     size: 'md',
-    connections: ['python', 'apis']
+    connections: ['python', 'apis', 'api-design', 'backend']
+  },
+  {
+    id: 'flask',
+    label: 'Flask',
+    x: 62,
+    y: 25,
+    size: 'sm',
+    connections: ['python', 'apis', 'backend']
   },
   {
     id: 'laravel',
@@ -91,7 +110,15 @@ const SKILLS = [
     x: 75,
     y: 30,
     size: 'md',
-    connections: ['php', 'mysql']
+    connections: ['php', 'mysql', 'backend']
+  },
+  {
+    id: 'yii2',
+    label: 'Yii2',
+    x: 85,
+    y: 30,
+    size: 'sm',
+    connections: ['php', 'mysql', 'backend']
   },
   {
     id: 'nodejs',
@@ -99,59 +126,115 @@ const SKILLS = [
     x: 20,
     y: 45,
     size: 'md',
-    connections: ['javascript', 'apis']
+    connections: ['javascript', 'typescript', 'apis', 'resend', 'backend']
   },
   {
     id: 'apis',
-    label: 'REST / GraphQL APIs',
-    x: 60,
+    label: 'REST APIs',
+    x: 55,
     y: 40,
     size: 'lg',
-    connections: ['backend', 'oauth', 'postman']
+    connections: ['backend', 'graphql', 'api-design', 'oauth', 'postman']
+  },
+  {
+    id: 'graphql',
+    label: 'GraphQL',
+    x: 68,
+    y: 38,
+    size: 'md',
+    connections: ['apis', 'api-design', 'react', 'nodejs']
+  },
+  {
+    id: 'api-design',
+    label: 'API Design',
+    x: 63,
+    y: 48,
+    size: 'md',
+    connections: ['apis', 'graphql', 'backend', 'secure-coding']
+  },
+  {
+    id: 'ajax',
+    label: 'AJAX',
+    x: 35,
+    y: 50,
+    size: 'sm',
+    connections: ['javascript', 'jquery', 'apis']
   },
   {
     id: 'oauth',
     label: 'OAuth 2.0',
-    x: 75,
+    x: 78,
     y: 45,
     size: 'sm',
-    connections: ['apis', 'security']
+    connections: ['apis', 'secure-coding']
   },
   {
-    id: 'security',
+    id: 'secure-coding',
     label: 'Secure Coding',
     x: 90,
     y: 45,
+    size: 'md',
+    connections: ['oauth', 'api-design', 'backend']
+  },
+  {
+    id: 'resend',
+    label: 'Resend',
+    x: 30,
+    y: 42,
     size: 'sm',
-    connections: ['oauth']
+    connections: ['nodejs', 'email-api', 'vercel']
+  },
+  {
+    id: 'email-api',
+    label: 'Email API Integration',
+    x: 38,
+    y: 43,
+    size: 'sm',
+    connections: ['resend', 'nodejs', 'apis']
   },
 
 
   // ================= FRONTEND =================
 
   {
+    id: 'frontend',
+    label: 'Frontend Development',
+    x: 20,
+    y: 85,
+    size: 'lg',
+    connections: [
+      'react', 'html5', 'css3', 'tailwind', 'mui', 'radix',
+      'react-router', 'react-hook-form', 'framer-motion',
+      'vite', 'jquery', 'bootstrap', 'scss-less'
+    ]
+  },
+  {
     id: 'react',
     label: 'React',
     x: 15,
     y: 55,
     size: 'lg',
-    connections: ['javascript', 'typescript', 'tailwind']
+    connections: [
+      'javascript', 'typescript', 'tailwind', 'mui', 'radix',
+      'react-router', 'react-hook-form', 'framer-motion',
+      'vite', 'graphql', 'frontend'
+    ]
   },
   {
-    id: 'html',
+    id: 'html5',
     label: 'HTML5',
     x: 5,
     y: 65,
     size: 'sm',
-    connections: ['frontend']
+    connections: ['frontend', 'css3']
   },
   {
-    id: 'css',
+    id: 'css3',
     label: 'CSS3',
     x: 15,
     y: 70,
     size: 'sm',
-    connections: ['frontend']
+    connections: ['frontend', 'html5', 'tailwind', 'scss-less']
   },
   {
     id: 'tailwind',
@@ -159,7 +242,7 @@ const SKILLS = [
     x: 25,
     y: 65,
     size: 'md',
-    connections: ['react']
+    connections: ['react', 'css3', 'frontend']
   },
   {
     id: 'mui',
@@ -167,35 +250,75 @@ const SKILLS = [
     x: 35,
     y: 75,
     size: 'sm',
-    connections: ['react']
+    connections: ['react', 'frontend']
   },
   {
-    id: 'frontend',
-    label: 'Frontend Development',
-    x: 20,
+    id: 'radix',
+    label: 'Radix UI',
+    x: 45,
+    y: 75,
+    size: 'sm',
+    connections: ['react', 'frontend']
+  },
+  {
+    id: 'react-router',
+    label: 'React Router',
+    x: 5,
+    y: 75,
+    size: 'sm',
+    connections: ['react', 'frontend']
+  },
+  {
+    id: 'react-hook-form',
+    label: 'React Hook Form',
+    x: 30,
+    y: 80,
+    size: 'sm',
+    connections: ['react', 'frontend', 'email-api']
+  },
+  {
+    id: 'framer-motion',
+    label: 'Framer Motion',
+    x: 40,
+    y: 65,
+    size: 'md',
+    connections: ['react', 'frontend']
+  },
+  {
+    id: 'vite',
+    label: 'Vite',
+    x: 10,
+    y: 50,
+    size: 'md',
+    connections: ['react', 'javascript', 'typescript', 'eslint', 'automated-builds']
+  },
+  {
+    id: 'jquery',
+    label: 'jQuery',
+    x: 50,
     y: 85,
-    size: 'lg',
-    connections: ['react', 'html', 'css']
+    size: 'sm',
+    connections: ['javascript', 'ajax', 'frontend']
   },
   {
     id: 'bootstrap',
     label: 'Bootstrap',
-    x: 45,
-    y: 85,
-    size: 'sm',
-    connections: ['frontend']
-  },
-  {
-    id: 'scss',
-    label: 'SCSS / LESS',
     x: 60,
     y: 85,
     size: 'sm',
-    connections: ['frontend']
+    connections: ['frontend', 'css3']
+  },
+  {
+    id: 'scss-less',
+    label: 'SCSS / LESS',
+    x: 70,
+    y: 85,
+    size: 'sm',
+    connections: ['frontend', 'css3']
   },
 
 
-  // ================= DATABASES =================
+  // ================= DATABASES & DATA PIPELINES =================
 
   {
     id: 'databases',
@@ -203,7 +326,11 @@ const SKILLS = [
     x: 70,
     y: 55,
     size: 'lg',
-    connections: ['sql', 'postgresql', 'mongodb']
+    connections: [
+      'sql', 'postgresql', 'mysql', 'mongodb', 'mssql',
+      'ms-access', 'firebase', 'database-optimization',
+      'data-ingestion', 'etl'
+    ]
   },
   {
     id: 'sql',
@@ -211,7 +338,7 @@ const SKILLS = [
     x: 65,
     y: 65,
     size: 'md',
-    connections: ['postgresql', 'mysql']
+    connections: ['postgresql', 'mysql', 'mssql', 'database-optimization']
   },
   {
     id: 'postgresql',
@@ -219,7 +346,7 @@ const SKILLS = [
     x: 80,
     y: 65,
     size: 'md',
-    connections: ['gis', 'django']
+    connections: ['sql', 'django', 'geospatial', 'databases']
   },
   {
     id: 'mysql',
@@ -227,7 +354,7 @@ const SKILLS = [
     x: 85,
     y: 55,
     size: 'md',
-    connections: ['php', 'laravel']
+    connections: ['sql', 'php', 'laravel', 'yii2']
   },
   {
     id: 'mongodb',
@@ -235,7 +362,7 @@ const SKILLS = [
     x: 90,
     y: 65,
     size: 'sm',
-    connections: ['databases']
+    connections: ['databases', 'data-ingestion']
   },
   {
     id: 'firebase',
@@ -243,19 +370,39 @@ const SKILLS = [
     x: 75,
     y: 75,
     size: 'sm',
-    connections: ['databases']
+    connections: ['databases', 'data-ingestion']
   },
-
-
-  // ================= DATA ENGINEERING =================
-
   {
-    id: 'data-engineering',
-    label: 'Data Engineering',
-    x: 50,
-    y: 55,
-    size: 'lg',
-    connections: ['python', 'pandas', 'pyspark', 'etl']
+    id: 'mssql',
+    label: 'Microsoft SQL Server',
+    x: 95,
+    y: 58,
+    size: 'sm',
+    connections: ['sql', 'databases']
+  },
+  {
+    id: 'ms-access',
+    label: 'Microsoft Access',
+    x: 95,
+    y: 72,
+    size: 'sm',
+    connections: ['databases', 'data-collection']
+  },
+  {
+    id: 'database-optimization',
+    label: 'Database Optimization',
+    x: 78,
+    y: 48,
+    size: 'md',
+    connections: ['sql', 'postgresql', 'mysql', 'databases']
+  },
+  {
+    id: 'data-ingestion',
+    label: 'Data Ingestion',
+    x: 58,
+    y: 58,
+    size: 'md',
+    connections: ['etl', 'databases', 'data-engineering']
   },
   {
     id: 'etl',
@@ -263,103 +410,147 @@ const SKILLS = [
     x: 45,
     y: 65,
     size: 'md',
-    connections: ['data-engineering']
-  },
-  {
-    id: 'pandas',
-    label: 'Pandas',
-    x: 35,
-    y: 60,
-    size: 'md',
-    connections: ['python', 'analytics']
-  },
-  {
-    id: 'numpy',
-    label: 'NumPy',
-    x: 25,
-    y: 60,
-    size: 'sm',
-    connections: ['python']
-  },
-  {
-    id: 'pyspark',
-    label: 'PySpark',
-    x: 55,
-    y: 75,
-    size: 'md',
-    connections: ['data-engineering']
-  },
-  {
-    id: 'scraping',
-    label: 'Web Scraping',
-    x: 65,
-    y: 80,
-    size: 'sm',
-    connections: ['python']
+    connections: ['data-engineering', 'data-ingestion', 'cleaning', 'transformation']
   },
 
 
-  // ================= MACHINE LEARNING =================
+  // ================= CLOUD / DEVOPS =================
 
   {
-    id: 'ml',
-    label: 'Machine Learning',
-    x: 40,
-    y: 45,
+    id: 'cloud',
+    label: 'Cloud / DevOps',
+    x: 12,
+    y: 90,
     size: 'lg',
-    connections: ['python', 'tensorflow', 'pytorch']
+    connections: [
+      'docker', 'azure', 'vercel', 'cicd', 'github',
+      'bitbucket', 'linux', 'linux-shell', 'deployments',
+      'automated-builds', 'agile', 'jira', 'asana', 'postman', 'eslint'
+    ]
   },
   {
-    id: 'deep-learning',
-    label: 'Deep Learning',
-    x: 35,
-    y: 30,
-    size: 'lg',
-    connections: ['tensorflow', 'pytorch']
-  },
-  {
-    id: 'tensorflow',
-    label: 'TensorFlow',
-    x: 25,
-    y: 15,
+    id: 'docker',
+    label: 'Docker',
+    x: 5,
+    y: 90,
     size: 'md',
-    connections: ['deep-learning']
+    connections: ['cloud', 'deployments']
   },
   {
-    id: 'pytorch',
-    label: 'PyTorch',
-    x: 65,
-    y: 15,
-    size: 'md',
-    connections: ['deep-learning']
-  },
-  {
-    id: 'sklearn',
-    label: 'Scikit-learn',
-    x: 70,
-    y: 20,
-    size: 'sm',
-    connections: ['ml']
-  },
-  {
-    id: 'cnn',
-    label: 'CNN',
-    x: 50,
+    id: 'azure',
+    label: 'Azure',
+    x: 15,
     y: 80,
-    size: 'sm',
-    connections: ['deep-learning']
+    size: 'md',
+    connections: ['cloud', 'deployments']
   },
   {
-    id: 'algorithms',
-    label: 'SVM / KNN / Random Forest',
-    x: 80,
+    id: 'vercel',
+    label: 'Vercel',
+    x: 25,
+    y: 80,
+    size: 'md',
+    connections: ['cloud', 'automated-builds', 'resend']
+  },
+  {
+    id: 'cicd',
+    label: 'CI/CD',
+    x: 25,
+    y: 90,
+    size: 'md',
+    connections: ['github', 'bitbucket', 'automated-builds', 'deployments']
+  },
+  {
+    id: 'github',
+    label: 'GitHub',
+    x: 35,
+    y: 90,
+    size: 'sm',
+    connections: ['cicd', 'cloud']
+  },
+  {
+    id: 'bitbucket',
+    label: 'Bitbucket',
+    x: 45,
+    y: 90,
+    size: 'sm',
+    connections: ['cicd', 'cloud']
+  },
+  {
+    id: 'linux',
+    label: 'Linux',
+    x: 5,
+    y: 82,
+    size: 'sm',
+    connections: ['linux-shell', 'cloud']
+  },
+  {
+    id: 'linux-shell',
+    label: 'Linux Shell Scripting',
+    x: 12,
     y: 85,
     size: 'sm',
-    connections: ['ml']
+    connections: ['linux', 'cloud', 'automated-builds']
+  },
+  {
+    id: 'deployments',
+    label: 'Staging / Production Deployments',
+    x: 38,
+    y: 82,
+    size: 'md',
+    connections: ['cicd', 'docker', 'azure', 'vercel']
+  },
+  {
+    id: 'automated-builds',
+    label: 'Automated Build Pipelines',
+    x: 32,
+    y: 72,
+    size: 'md',
+    connections: ['cicd', 'vercel', 'vite', 'eslint']
+  },
+  {
+    id: 'agile',
+    label: 'Agile Methodologies',
+    x: 55,
+    y: 92,
+    size: 'sm',
+    connections: ['jira', 'asana', 'teamwork']
+  },
+  {
+    id: 'jira',
+    label: 'Jira',
+    x: 65,
+    y: 92,
+    size: 'sm',
+    connections: ['agile', 'cloud']
+  },
+  {
+    id: 'asana',
+    label: 'Asana',
+    x: 72,
+    y: 92,
+    size: 'sm',
+    connections: ['agile', 'time-management']
+  },
+  {
+    id: 'postman',
+    label: 'Postman',
+    x: 68,
+    y: 50,
+    size: 'sm',
+    connections: ['apis', 'api-design', 'cloud']
+  },
+  {
+    id: 'eslint',
+    label: 'ESLint',
+    x: 18,
+    y: 72,
+    size: 'sm',
+    connections: ['vite', 'automated-builds', 'frontend']
   },
 
 
-  // ================= SPACE / SIMULATION =================
+  // ================= SIMULATION & DATA SYSTEMS =================
 
   {
     id: 'simulation',
@@ -367,95 +558,283 @@ const SKILLS = [
     x: 50,
     y: 90,
     size: 'lg',
-    connections: ['basilisk', 'unity', 'visualisation']
+    connections: ['basilisk', 'vizard', 'unity', 'mission-visualisation', 'cpp', 'python']
   },
   {
     id: 'basilisk',
     label: 'Basilisk',
     x: 55,
-    y: 90,
+    y: 88,
     size: 'md',
-    connections: ['cpp', 'python']
+    connections: ['simulation', 'python', 'c', 'cpp']
+  },
+  {
+    id: 'vizard',
+    label: 'Vizard',
+    x: 62,
+    y: 88,
+    size: 'md',
+    connections: ['simulation', 'mission-visualisation']
   },
   {
     id: 'unity',
-    label: 'Unity / Vizard',
+    label: 'Unity',
     x: 70,
-    y: 90,
+    y: 88,
     size: 'md',
-    connections: ['simulation']
+    connections: ['simulation', 'mission-visualisation']
   },
   {
     id: 'geospatial',
-    label: 'Geospatial Processing',
+    label: 'Geospatial Data Processing',
     x: 85,
     y: 90,
     size: 'lg',
-    connections: ['satellite', 'gis']
+    connections: ['satellite', 'mission-visualisation', 'postgresql', 'data-engineering']
   },
   {
     id: 'satellite',
     label: 'Satellite Imagery',
     x: 90,
-    y: 75,
+    y: 78,
     size: 'lg',
-    connections: ['computer-vision']
+    connections: ['geospatial', 'cnn', 'computer-vision', 'ml']
   },
-
-
-  // ================= CLOUD DEVOPS =================
-
   {
-    id: 'docker',
-    label: 'Docker',
-    x: 10,
-    y: 90,
+    id: 'mission-visualisation',
+    label: 'Mission Visualisation',
+    x: 78,
+    y: 88,
     size: 'md',
-    connections: ['cloud']
+    connections: ['simulation', 'vizard', 'unity', 'geospatial']
+  },
+
+
+  // ================= DATA ENGINEERING & ANALYSIS =================
+
+  {
+    id: 'data-engineering',
+    label: 'Data Engineering',
+    x: 50,
+    y: 55,
+    size: 'lg',
+    connections: [
+      'python', 'pandas', 'numpy', 'pyspark', 'etl',
+      'data-collection', 'cleaning', 'transformation',
+      'web-scraping', 'excel', 'data-ingestion'
+    ]
   },
   {
-    id: 'azure',
-    label: 'Microsoft Azure',
-    x: 15,
-    y: 80,
-    size: 'md',
-    connections: ['cloud']
-  },
-  {
-    id: 'cicd',
-    label: 'CI/CD',
-    x: 25,
-    y: 90,
+    id: 'data-collection',
+    label: 'Data Collection',
+    x: 40,
+    y: 58,
     size: 'sm',
-    connections: ['github']
+    connections: ['data-engineering', 'web-scraping', 'ms-access']
   },
   {
-    id: 'github',
-    label: 'GitHub / Bitbucket',
+    id: 'cleaning',
+    label: 'Data Cleaning',
     x: 35,
-    y: 90,
+    y: 63,
     size: 'sm',
-    connections: ['cicd']
+    connections: ['data-engineering', 'pandas', 'etl']
   },
   {
-    id: 'linux',
-    label: 'Linux Shell',
-    x: 5,
-    y: 85,
+    id: 'transformation',
+    label: 'Data Transformation',
+    x: 42,
+    y: 70,
     size: 'sm',
-    connections: ['cloud']
+    connections: ['data-engineering', 'etl', 'pyspark']
+  },
+  {
+    id: 'web-scraping',
+    label: 'Web Scraping',
+    x: 65,
+    y: 80,
+    size: 'sm',
+    connections: ['python', 'data-collection', 'data-engineering']
+  },
+  {
+    id: 'pandas',
+    label: 'Pandas',
+    x: 35,
+    y: 60,
+    size: 'md',
+    connections: ['python', 'numpy', 'analytics', 'cleaning']
+  },
+  {
+    id: 'numpy',
+    label: 'NumPy',
+    x: 25,
+    y: 60,
+    size: 'sm',
+    connections: ['python', 'pandas', 'scipy']
+  },
+  {
+    id: 'pyspark',
+    label: 'PySpark',
+    x: 55,
+    y: 75,
+    size: 'md',
+    connections: ['data-engineering', 'transformation']
+  },
+  {
+    id: 'excel',
+    label: 'Excel',
+    x: 75,
+    y: 82,
+    size: 'sm',
+    connections: ['data-engineering', 'analytics']
   },
 
 
-  // ================= TOOLS =================
+  // ================= MACHINE LEARNING & ANALYTICS =================
 
   {
-    id: 'tools',
-    label: 'Engineering Tools',
+    id: 'ml',
+    label: 'Machine Learning',
+    x: 40,
+    y: 45,
+    size: 'lg',
+    connections: [
+      'python', 'deep-learning', 'tensorflow', 'pytorch',
+      'sklearn', 'scipy', 'svm', 'knn', 'random-forest',
+      'analytics'
+    ]
+  },
+  {
+    id: 'deep-learning',
+    label: 'Deep Learning',
+    x: 35,
+    y: 30,
+    size: 'lg',
+    connections: ['tensorflow', 'pytorch', 'cnn', 'ml']
+  },
+  {
+    id: 'tensorflow',
+    label: 'TensorFlow',
+    x: 25,
+    y: 15,
+    size: 'md',
+    connections: ['deep-learning', 'python', 'ml']
+  },
+  {
+    id: 'pytorch',
+    label: 'PyTorch',
+    x: 65,
+    y: 15,
+    size: 'md',
+    connections: ['deep-learning', 'python', 'ml']
+  },
+  {
+    id: 'sklearn',
+    label: 'Scikit-learn',
+    x: 70,
+    y: 20,
+    size: 'sm',
+    connections: ['ml', 'python', 'svm', 'knn', 'random-forest']
+  },
+  {
+    id: 'scipy',
+    label: 'SciPy',
+    x: 75,
+    y: 18,
+    size: 'sm',
+    connections: ['python', 'numpy', 'ml']
+  },
+  {
+    id: 'cnn',
+    label: 'CNN',
+    x: 50,
+    y: 80,
+    size: 'sm',
+    connections: ['deep-learning', 'satellite', 'computer-vision']
+  },
+  {
+    id: 'svm',
+    label: 'SVM',
+    x: 78,
+    y: 84,
+    size: 'sm',
+    connections: ['ml', 'sklearn']
+  },
+  {
+    id: 'knn',
+    label: 'KNN',
+    x: 84,
+    y: 84,
+    size: 'sm',
+    connections: ['ml', 'sklearn']
+  },
+  {
+    id: 'random-forest',
+    label: 'Random Forest',
+    x: 90,
+    y: 84,
+    size: 'sm',
+    connections: ['ml', 'sklearn']
+  },
+  {
+    id: 'computer-vision',
+    label: 'Computer Vision',
+    x: 92,
+    y: 70,
+    size: 'md',
+    connections: ['cnn', 'satellite', 'deep-learning']
+  },
+  {
+    id: 'analytics',
+    label: 'Analytics',
+    x: 88,
+    y: 52,
+    size: 'lg',
+    connections: ['powerbi', 'tableau', 'sas', 'orange', 'pandas', 'excel', 'ml']
+  },
+  {
+    id: 'powerbi',
+    label: 'Power BI',
+    x: 90,
+    y: 55,
+    size: 'sm',
+    connections: ['analytics']
+  },
+  {
+    id: 'tableau',
+    label: 'Tableau',
+    x: 95,
+    y: 52,
+    size: 'sm',
+    connections: ['analytics']
+  },
+  {
+    id: 'sas',
+    label: 'SAS',
+    x: 95,
+    y: 47,
+    size: 'sm',
+    connections: ['analytics']
+  },
+  {
+    id: 'orange',
+    label: 'Orange',
+    x: 88,
+    y: 60,
+    size: 'sm',
+    connections: ['analytics', 'ml']
+  },
+
+
+  // ================= DEVELOPMENT ENVIRONMENTS =================
+
+  {
+    id: 'dev-environments',
+    label: 'Development Environments',
     x: 90,
     y: 20,
     size: 'lg',
-    connections: ['vscode', 'jupyter', 'jira']
+    connections: ['vscode', 'jupyter', 'anaconda', 'rstudio', 'spyder']
   },
   {
     id: 'vscode',
@@ -463,7 +842,7 @@ const SKILLS = [
     x: 85,
     y: 30,
     size: 'sm',
-    connections: ['tools']
+    connections: ['dev-environments', 'frontend', 'backend']
   },
   {
     id: 'jupyter',
@@ -471,7 +850,7 @@ const SKILLS = [
     x: 90,
     y: 35,
     size: 'sm',
-    connections: ['python']
+    connections: ['dev-environments', 'python', 'ml', 'data-engineering']
   },
   {
     id: 'anaconda',
@@ -479,15 +858,103 @@ const SKILLS = [
     x: 95,
     y: 40,
     size: 'sm',
-    connections: ['python']
+    connections: ['dev-environments', 'python', 'jupyter']
   },
   {
-    id: 'powerbi',
-    label: 'Power BI / Tableau',
-    x: 90,
-    y: 55,
+    id: 'rstudio',
+    label: 'RStudio',
+    x: 85,
+    y: 38,
     size: 'sm',
-    connections: ['analytics']
+    connections: ['dev-environments', 'analytics']
+  },
+  {
+    id: 'spyder',
+    label: 'Spyder',
+    x: 82,
+    y: 42,
+    size: 'sm',
+    connections: ['dev-environments', 'python']
+  },
+
+
+  // ================= PROFESSIONAL SKILLS =================
+
+  {
+    id: 'professional-skills',
+    label: 'Professional Skills',
+    x: 50,
+    y: 5,
+    size: 'lg',
+    connections: [
+      'communication', 'teamwork', 'time-management',
+      'adaptability', 'quick-learning', 'continuous-learning',
+      'ai-assisted-development', 'creative-problem-solving'
+    ]
+  },
+  {
+    id: 'communication',
+    label: 'Strong Communication',
+    x: 42,
+    y: 5,
+    size: 'sm',
+    connections: ['professional-skills', 'teamwork']
+  },
+  {
+    id: 'teamwork',
+    label: 'Teamwork',
+    x: 48,
+    y: 8,
+    size: 'sm',
+    connections: ['professional-skills', 'communication', 'agile']
+  },
+  {
+    id: 'time-management',
+    label: 'Time Management',
+    x: 56,
+    y: 8,
+    size: 'sm',
+    connections: ['professional-skills', 'asana']
+  },
+  {
+    id: 'adaptability',
+    label: 'Adaptability',
+    x: 62,
+    y: 5,
+    size: 'sm',
+    connections: ['professional-skills', 'quick-learning']
+  },
+  {
+    id: 'quick-learning',
+    label: 'Quick Learning Ability',
+    x: 68,
+    y: 8,
+    size: 'sm',
+    connections: ['professional-skills', 'continuous-learning']
+  },
+  {
+    id: 'continuous-learning',
+    label: 'Continuous Learning',
+    x: 74,
+    y: 5,
+    size: 'sm',
+    connections: ['professional-skills', 'ai-assisted-development']
+  },
+  {
+    id: 'ai-assisted-development',
+    label: 'AI-Assisted Development',
+    x: 80,
+    y: 8,
+    size: 'sm',
+    connections: ['professional-skills', 'creative-problem-solving']
+  },
+  {
+    id: 'creative-problem-solving',
+    label: 'Creative Problem-Solving',
+    x: 86,
+    y: 5,
+    size: 'sm',
+    connections: ['professional-skills', 'adaptability']
   }
 
 ];
