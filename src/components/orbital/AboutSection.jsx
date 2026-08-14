@@ -19,7 +19,7 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-4 text-[#8E9AAF] leading-relaxed text-sm sm:text-base">
               <p>
-                Software Engineer with 9+ years of experience building backend systems, full-stack web applications, APIs, data workflows, and research-to-production software platforms with AI agents. Strong experience across Python, React, TypeScript, SQL databases, REST/GraphQL APIs, CI/CD, and scalable application architecture, with recent work in simulation systems, digital engineering, geospatial data platforms, machine learning workflows, and satellite imagery analysis. Comfortable owning features from concept to production, collaborating with domain specialists, and translating ambiguous technical requirements into reliable, maintainable, data-driven product features.
+                Senior Software Engineer with 9+ years of experience developing backend systems, full-stack applications, APIs, data workflows, and research-to-production platforms. Strong expertise in Python, Node.js, React, TypeScript, SQL/NoSQL databases, REST/GraphQL APIs, CI/CD, docker, Azure and scalable software architecture. Recent experience includes simulation and digital engineering systems, geospatial and satellite-data platforms, machine learning pipelines, and AI-powered applications using LLMs and the OpenAI API. Proven ability to translate complex requirements into reliable, maintainable solutions, own delivery from concept to production, collaborate with researchers and cross-functional teams, and provide technical guidance and mentoring.
               </p>
             </div>
           </SectionReveal>
